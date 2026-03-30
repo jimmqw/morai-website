@@ -3,84 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morai - AI Tools & Resources</title>
+    <title>Morai - AI Tools & Resources | Curated AI Reviews</title>
+    <meta name="description" content="Discover and review the best AI tools of 2026. From chatbots to image generators, we test and compare AI products to help you work smarter.">
+    <meta name="keywords" content="AI tools, ChatGPT, Claude, Midjourney, AI review, AI tools 2026">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 1rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
-        nav { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 1rem; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8f9fa; }
+        a { color: #667eea; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 1rem; text-align: center; }
+        header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.3rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        
+        /* Nav */
+        nav { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 1rem; position: sticky; top: 0; z-index: 100; }
         nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-        nav a { color: #667eea; text-decoration: none; font-weight: 500; }
-        nav a:hover { text-decoration: underline; }
-        main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-        .hero { text-align: center; padding: 3rem 1rem; background: #f8f9fa; border-radius: 12px; margin-bottom: 2rem; }
-        .hero h2 { font-size: 1.8rem; margin-bottom: 1rem; color: #333; }
-        .hero p { max-width: 600px; margin: 0 auto 1.5rem; color: #666; }
-        .btn { display: inline-block; background: #667eea; color: white; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s; }
-        .btn:hover { transform: translateY(-2px); }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .tool-card { background: white; border: 1px solid #eee; border-radius: 12px; padding: 1.5rem; transition: box-shadow 0.3s; }
-        .tool-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-        .tool-card h3 { color: #667eea; margin-bottom: 0.5rem; }
-        .tool-card p { color: #666; font-size: 0.95rem; }
-        footer { background: #333; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        nav a { color: #667eea; font-weight: 500; }
+        
+        /* Container */
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+        
+        /* Hero */
+        .hero { text-align: center; padding: 3rem 1.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 16px; margin-bottom: 2rem; }
+        .hero h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .hero p { max-width: 650px; margin: 0 auto 1.5rem; color: #666; font-size: 1.1rem; }
+        .hero .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat strong { display: block; font-size: 2rem; color: #667eea; }
+        .stat span { color: #888; font-size: 0.9rem; }
+        
+        /* Section Titles */
+        .section-title { font-size: 1.8rem; text-align: center; margin-bottom: 2rem; color: #333; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #667eea; margin: 0.8rem auto 0; border-radius: 2px; }
+        
+        /* Tool Cards */
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .tool-card { background: white; border-radius: 16px; padding: 1.8rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+        .tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+        .tool-card .badge { display: inline-block; background: #667eea; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; margin-bottom: 1rem; }
+        .tool-card .badge.new { background: #e74c3c; }
+        .tool-card .badge.popular { background: #f39c12; }
+        .tool-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; color: #333; }
+        .tool-card .rating { color: #f39c12; margin-bottom: 0.8rem; font-size: 0.95rem; }
+        .tool-card p { color: #666; font-size: 0.95rem; margin-bottom: 1rem; }
+        .tool-card .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+        .tag { background: #f0f0ff; color: #667eea; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem; }
+        
+        /* Articles */
+        .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .article-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .article-card:hover { transform: translateY(-4px); }
+        .article-card img { width: 100%; height: 180px; object-fit: cover; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .article-card .content { padding: 1.5rem; }
+        .article-card .date { color: #999; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .article-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: #333; }
+        .article-card p { color: #666; font-size: 0.9rem; }
+        
+        /* Categories */
+        .categories { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+        .category { background: white; padding: 0.8rem 1.5rem; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); cursor: pointer; transition: all 0.3s; }
+        .category:hover, .category.active { background: #667eea; color: white; }
+        
+        /* CTA */
+        .cta { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 4rem 1rem; border-radius: 16px; margin: 2rem 0; }
+        .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta p { opacity: 0.9; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .btn { display: inline-block; background: white; color: #667eea; padding: 0.9rem 2rem; border-radius: 30px; font-weight: 600; transition: transform 0.2s; }
+        .btn:hover { transform: scale(1.05); text-decoration: none; }
+        
+        /* Footer */
+        footer { background: #222; color: #aaa; text-align: center; padding: 3rem 1rem; margin-top: 3rem; }
+        footer p { margin-bottom: 0.5rem; }
+        footer a { color: #667eea; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .hero .stats { gap: 1.5rem; }
+            .stat strong { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>🤖 Morai</h1>
-        <p>Curated AI Tools & Resources for Everyone</p>
+        <p>Your trusted source for AI tools reviews, comparisons, and the latest AI news</p>
     </header>
+    
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#tools">AI Tools</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <main>
+    
+    <div class="container">
         <section class="hero" id="home">
-            <h2>Discover the Best AI Tools</h2>
-            <p>We curate and review the latest AI-powered tools to help you work smarter, not harder.</p>
-            <a href="#tools" class="btn">Explore Tools →</a>
+            <h2>Discover the Best AI Tools in 2026</h2>
+            <p>We test, review, and compare the latest AI tools so you can make smarter decisions. No fluff, just honest insights from real usage.</p>
+            <div class="stats">
+                <div class="stat"><strong>50+</strong><span>Tools Reviewed</span></div>
+                <div class="stat"><strong>10K+</strong><span>Monthly Readers</span></div>
+                <div class="stat"><strong>4.8</strong><span>Avg Rating</span></div>
+            </div>
         </section>
         
         <section id="tools">
-            <h2 style="text-align: center; margin-bottom: 1rem;">Popular AI Tools</h2>
+            <h2 class="section-title">🔥 Popular AI Tools</h2>
             <div class="tools-grid">
                 <article class="tool-card">
-                    <h3>ChatGPT</h3>
-                    <p>Advanced AI chatbot for conversation, writing, and problem-solving.</p>
+                    <span class="badge new">NEW</span>
+                    <h3>ChatGPT-5</h3>
+                    <div class="rating">★★★★★ 4.9/5</div>
+                    <p>OpenAI's latest flagship model. Exceptional reasoning, coding, and creative writing. The go-to choice for most AI tasks.</p>
+                    <p><strong>Best for:</strong> General purpose AI assistant, coding, research</p>
+                    <div class="tags">
+                        <span class="tag">Chatbot</span>
+                        <span class="tag">GPT-5</span>
+                        <span class="tag">Productivity</span>
+                    </div>
                 </article>
+                
                 <article class="tool-card">
-                    <h3>Claude</h3>
-                    <p>AI assistant focused on analysis, writing, and thoughtful responses.</p>
+                    <span class="badge popular">POPULAR</span>
+                    <h3>Claude 3.7</h3>
+                    <div class="rating">★★★★★ 4.8/5</div>
+                    <p>Anthropic's most capable model yet. Superior at long-form content, analysis, and nuanced conversations. Excellent for complex tasks.</p>
+                    <p><strong>Best for:</strong> Writing, analysis, extended thinking</p>
+                    <div class="tags">
+                        <span class="tag">Chatbot</span>
+                        <span class="tag">Long Context</span>
+                        <span class="tag">Research</span>
+                    </div>
                 </article>
+                
                 <article class="tool-card">
-                    <h3>Midjourney</h3>
-                    <p>AI image generation tool for creating stunning visuals.</p>
+                    <span class="badge new">NEW</span>
+                    <h3>Midjourney V7</h3>
+                    <div class="rating">★★★★☆ 4.7/5</div>
+                    <p>The latest Midjourney model produces stunning, photorealistic images. Improved coherence and prompt following make it even more powerful.</p>
+                    <p><strong>Best for:</strong> Art, marketing visuals, concept design</p>
+                    <div class="tags">
+                        <span class="tag">Image Gen</span>
+                        <span class="tag">Art</span>
+                        <span class="tag">Design</span>
+                    </div>
                 </article>
+                
                 <article class="tool-card">
-                    <h3>GitHub Copilot</h3>
-                    <p>AI pair programmer that suggests code in real-time.</p>
+                    <h3>Gemini 2.0 Ultra</h3>
+                    <div class="rating">★★★★☆ 4.6/5</div>
+                    <p>Google's most powerful AI model. Native integration with Google services makes it perfect for users in the Google ecosystem.</p>
+                    <p><strong>Best for:</strong> Google users, multimodality, research</p>
+                    <div class="tags">
+                        <span class="tag">Multimodal</span>
+                        <span class="tag">Google</span>
+                        <span class="tag">Research</span>
+                    </div>
                 </article>
+                
+                <article class="tool-card">
+                    <h3>Cursor AI</h3>
+                    <div class="rating">★★★★★ 4.9/5</div>
+                    <p>The AI-first code editor. Built on VS Code with deep AI integration. Code generation, debugging, and refactoring have never been smoother.</p>
+                    <p><strong>Best for:</strong> Software development, pair programming</p>
+                    <div class="tags">
+                        <span class="tag">Coding</span>
+                        <span class="tag">IDE</span>
+                        <span class="tag">Developer</span>
+                    </div>
+                </article>
+                
                 <article class="tool-card">
                     <h3>Notion AI</h3>
-                    <p>AI-powered workspace for notes, docs, and project management.</p>
-                </article>
-                <article class="tool-card">
-                    <h3> Jasper </h3>
-                    <p>AI writing assistant for marketing content and copy.</p>
+                    <div class="rating">★★★★☆ 4.5/5</div>
+                    <p>AI directly inside your workspace. Summarize notes, generate content, brainstorm ideas—all without leaving Notion.</p>
+                    <p><strong>Best for:</strong> Note-taking, documentation, team wiki</p>
+                    <div class="tags">
+                        <span class="tag">Productivity</span>
+                        <span class="tag">Notes</span>
+                        <span class="tag">Workspace</span>
+                    </div>
                 </article>
             </div>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Morai. All rights reserved.</p>
-    <p>Powered by AI, Built with Love</p>
+        
+        <section id="reviews">
+            <h2 class="section-title">📝 In-Depth Reviews</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div style="height: 180px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🤖</div>
+                    <div class="content">
+                        <div class="date">March 28, 2026</div>
+                        <h3>ChatGPT-5 vs Claude 3.7: The Ultimate Comparison</h3>
+                        <p>We put both AI giants head-to-head across 50+ tests. Results might surprise you.</p>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div style="height: 180px; background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎨</div>
+                    <div class="content">
+                        <div class="date">March 25, 2026</div>
+                        <h3>Best AI Image Generators in 2026: Midjourney vs DALL-E 3 vs Stable Diffusion</h3>
+                        <p>Which AI image tool is worth your money? We tested them all so you don't have to.</p>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div style="height: 180px; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">💻</div>
+                    <div class="content">
+                        <div class="date">March 22, 2026</div>
+                        <h3>Cursor AI Review: Is It Really the Future of Coding?</h3>
+                        <p>After 3 months of daily use, here's our honest take on the AI-powered code editor.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section class="cta">
+            <h2>Want to Know Which AI Tools Are Right For You?</h2>
+            <p>Subscribe to our newsletter and get weekly AI tool recommendations tailored to your needs.</p>
+            <a href="#" class="btn">Get Personalized Recommendations →</a>
+        </section>
+        
+        <section id="blog">
+            <h2 class="section-title">📰 Latest from the Blog</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div style="height: 180px; background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🚀</div>
+                    <div class="content">
+                        <div class="date">March 30, 2026</div>
+                        <h3>10 AI Tools That Will 10x Your Productivity in 2026</h3>
+                        <p>These aren't your average tools. Here's how real professionals are using AI to get more done.</p>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div style="height: 180px; background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">💰</div>
+                    <div class="content">
+                        <div class="date">March 27, 2026</div>
+                        <h3>AI Tools Under $50/mo: Best Value Picks</h3>
+                        <p>You don't need an enterprise budget to access powerful AI. Here are our top budget-friendly picks.</p>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div style="height: 180px; background: linear-gradient(135deg, #1abc9c 0%, #3498db 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📱</div>
+                    <div class="content">
+                        <div class="date">March 24, 2026</div>
+                        <h3>AI Mobile Apps That Actually Work Well</h3>
+                        <p>Most AI apps are desktop-first. But these ones deliver great experiences on your phone too.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+    
+    <footer id="about">
+        <p><strong>Morai</strong> - Your Trusted AI Companion</p>
+        <p>We research, test, and review AI tools to help you make informed decisions.</p>
+        <p>© 2026 Morai. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
     </footer>
 </body>
 </html>
