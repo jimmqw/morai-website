@@ -46,13 +46,13 @@
         .tag { background: #f0f0ff; color: #667eea; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem; }
         
         .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
-        .article-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s; cursor: pointer; }
+        .article-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s; cursor: pointer; display: block; }
         .article-card:hover { transform: translateY(-4px); text-decoration: none; }
-        .article-card img { width: 100%; height: 180px; object-fit: cover; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .article-card .content { padding: 1.5rem; }
-        .article-card .date { color: #999; font-size: 0.85rem; margin-bottom: 0.5rem; }
-        .article-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: #333; }
-        .article-card p { color: #666; font-size: 0.9rem; }
+        .article-cover { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .article-content { padding: 1.5rem; }
+        .article-date { color: #999; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .article-title { font-size: 1.1rem; margin-bottom: 0.5rem; color: #333; }
+        .article-excerpt { color: #666; font-size: 0.9rem; }
         
         .cta { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 4rem 1rem; border-radius: 16px; margin: 2rem 0; }
         .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
@@ -105,12 +105,11 @@
                     <span class="badge new">NEW</span>
                     <h3>ChatGPT-5</h3>
                     <div class="rating">★★★★★ 4.9/5</div>
-                    <p>OpenAI's latest flagship model. Exceptional reasoning, coding, and creative writing. The go-to choice for most AI tasks.</p>
-                    <p><strong>Best for:</strong> General purpose AI assistant, coding, research</p>
+                    <p>OpenAI's latest flagship model. Exceptional reasoning, coding, and creative writing.</p>
+                    <p><strong>Best for:</strong> General purpose AI assistant</p>
                     <div class="tags">
                         <span class="tag">Chatbot</span>
                         <span class="tag">GPT-5</span>
-                        <span class="tag">Productivity</span>
                     </div>
                 </article>
                 
@@ -118,61 +117,22 @@
                     <span class="badge popular">POPULAR</span>
                     <h3>Claude 3.7</h3>
                     <div class="rating">★★★★★ 4.8/5</div>
-                    <p>Anthropic's most capable model yet. Superior at long-form content, analysis, and nuanced conversations. Excellent for complex tasks.</p>
-                    <p><strong>Best for:</strong> Writing, analysis, extended thinking</p>
+                    <p>Anthropic's most capable model. Superior at long-form content and analysis.</p>
+                    <p><strong>Best for:</strong> Writing, analysis</p>
                     <div class="tags">
                         <span class="tag">Chatbot</span>
                         <span class="tag">Long Context</span>
-                        <span class="tag">Research</span>
                     </div>
                 </article>
                 
                 <article class="tool-card">
-                    <span class="badge new">NEW</span>
                     <h3>Midjourney V7</h3>
                     <div class="rating">★★★★☆ 4.7/5</div>
-                    <p>The latest Midjourney model produces stunning, photorealistic images. Improved coherence and prompt following make it even more powerful.</p>
-                    <p><strong>Best for:</strong> Art, marketing visuals, concept design</p>
+                    <p>Stunning, photorealistic AI-generated images.</p>
+                    <p><strong>Best for:</strong> Art, design</p>
                     <div class="tags">
                         <span class="tag">Image Gen</span>
                         <span class="tag">Art</span>
-                        <span class="tag">Design</span>
-                    </div>
-                </article>
-                
-                <article class="tool-card">
-                    <h3>Gemini 2.0 Ultra</h3>
-                    <div class="rating">★★★★☆ 4.6/5</div>
-                    <p>Google's most powerful AI model. Native integration with Google services makes it perfect for users in the Google ecosystem.</p>
-                    <p><strong>Best for:</strong> Google users, multimodality, research</p>
-                    <div class="tags">
-                        <span class="tag">Multimodal</span>
-                        <span class="tag">Google</span>
-                        <span class="tag">Research</span>
-                    </div>
-                </article>
-                
-                <article class="tool-card">
-                    <h3>Cursor AI</h3>
-                    <div class="rating">★★★★★ 4.9/5</div>
-                    <p>The AI-first code editor. Built on VS Code with deep AI integration. Code generation, debugging, and refactoring have never been smoother.</p>
-                    <p><strong>Best for:</strong> Software development, pair programming</p>
-                    <div class="tags">
-                        <span class="tag">Coding</span>
-                        <span class="tag">IDE</span>
-                        <span class="tag">Developer</span>
-                    </div>
-                </article>
-                
-                <article class="tool-card">
-                    <h3>Notion AI</h3>
-                    <div class="rating">★★★★☆ 4.5/5</div>
-                    <p>AI directly inside your workspace. Summarize notes, generate content, brainstorm ideas—all without leaving Notion.</p>
-                    <p><strong>Best for:</strong> Note-taking, documentation, team wiki</p>
-                    <div class="tags">
-                        <span class="tag">Productivity</span>
-                        <span class="tag">Notes</span>
-                        <span class="tag">Workspace</span>
                     </div>
                 </article>
             </div>
@@ -182,78 +142,67 @@
             <h2 class="section-title">📝 In-Depth Reviews</h2>
             <div class="articles-grid">
                 <a href="/chatgpt-vs-claude.html" class="article-card">
-                    <div style="height: 180px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🤖</div>
-                    <div class="content">
-                        <div class="date">March 28, 2026</div>
-                        <h3>ChatGPT-5 vs Claude 3.7: The Ultimate Comparison</h3>
-                        <p>We put both AI giants head-to-head across 50+ tests. Results might surprise you.</p>
+                    <div class="article-cover" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">🤖</div>
+                    <div class="article-content">
+                        <div class="article-date">March 28, 2026</div>
+                        <h3 class="article-title">ChatGPT-5 vs Claude 3.7: The Ultimate Comparison</h3>
+                        <p class="article-excerpt">We put both AI giants head-to-head across 50+ tests.</p>
+                    </div>
+                </a>
+                
+                <a href="/ai-image-generators.html" class="article-card">
+                    <div class="article-cover" style="background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);">🎨</div>
+                    <div class="article-content">
+                        <div class="article-date">March 25, 2026</div>
+                        <h3 class="article-title">Best AI Image Generators 2026</h3>
+                        <p class="article-excerpt">Midjourney vs DALL-E vs Stable Diffusion compared.</p>
                     </div>
                 </a>
                 
                 <a href="/best-ai-tools-2026.html" class="article-card">
-                    <div style="height: 180px; background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🚀</div>
-                    <div class="content">
-                        <div class="date">March 30, 2026</div>
-                        <h3>10 AI Tools That Will 10x Your Productivity in 2026</h3>
-                        <p>These aren't your average tools. Here's how real professionals are using AI to get more done.</p>
+                    <div class="article-cover" style="background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);">🚀</div>
+                    <div class="article-content">
+                        <div class="article-date">March 30, 2026</div>
+                        <h3 class="article-title">10 AI Tools That Will 10x Your Productivity</h3>
+                        <p class="article-excerpt">Real tools, real results - tested by professionals.</p>
                     </div>
                 </a>
-                
-                <article class="article-card">
-                    <div style="height: 180px; background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎨</div>
-                    <div class="content">
-                        <div class="date">March 25, 2026</div>
-                        <h3>Best AI Image Generators in 2026: Midjourney vs DALL-E vs Stable Diffusion</h3>
-                        <p>Which AI image tool is worth your money? We tested them all so you don't have to.</p>
-                    </div>
-                </article>
             </div>
         </section>
         
         <section class="cta">
             <h2>Want to Know Which AI Tools Are Right For You?</h2>
-            <p>Subscribe to our newsletter and get weekly AI tool recommendations tailored to your needs.</p>
-            <a href="#" class="btn">Get Personalized Recommendations →</a>
+            <p>Subscribe to our newsletter and get weekly AI tool recommendations.</p>
+            <a href="#" class="btn">Get Weekly Picks →</a>
         </section>
         
         <section id="blog">
             <h2 class="section-title">📰 Latest from the Blog</h2>
             <div class="articles-grid">
-                <article class="article-card">
-                    <div style="height: 180px; background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">💰</div>
-                    <div class="content">
-                        <div class="date">March 27, 2026</div>
-                        <h3>AI Tools Under $50/mo: Best Value Picks</h3>
-                        <p>You don't need an enterprise budget to access powerful AI. Here are our top budget-friendly picks.</p>
+                <a href="/ai-writing-tools.html" class="article-card">
+                    <div class="article-cover" style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);">✍️</div>
+                    <div class="article-content">
+                        <div class="article-date">March 24, 2026</div>
+                        <h3 class="article-title">Best AI Writing Tools 2026</h3>
+                        <p class="article-excerpt">Jasper vs Copy.ai vs Writesonic - which one is right for you?</p>
                     </div>
-                </article>
+                </a>
                 
-                <article class="article-card">
-                    <div style="height: 180px; background: linear-gradient(135deg, #1abc9c 0%, #3498db 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📱</div>
-                    <div class="content">
-                        <div class="date">March 24, 2026</div>
-                        <h3>AI Mobile Apps That Actually Work Well</h3>
-                        <p>Most AI apps are desktop-first. But these ones deliver great experiences on your phone too.</p>
+                <a href="/cursor-ai-review.html" class="article-card">
+                    <div class="article-cover" style="background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);">💻</div>
+                    <div class="article-content">
+                        <div class="article-date">March 22, 2026</div>
+                        <h3 class="article-title">Cursor AI Review: The Future of Coding?</h3>
+                        <p class="article-excerpt">After 3 months of daily use, here's my honest take.</p>
                     </div>
-                </article>
-                
-                <article class="article-card">
-                    <div style="height: 180px; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">💻</div>
-                    <div class="content">
-                        <div class="date">March 22, 2026</div>
-                        <h3>Cursor AI Review: Is It Really the Future of Coding?</h3>
-                        <p>After 3 months of daily use, here's our honest take on the AI-powered code editor.</p>
-                    </div>
-                </article>
+                </a>
             </div>
         </section>
     </div>
     
     <footer id="about">
         <p><strong>Morai</strong> - Your Trusted AI Companion</p>
-        <p>We research, test, and review AI tools to help you make informed decisions.</p>
         <p>© 2026 Morai. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
     </footer>
 </body>
 </html>
