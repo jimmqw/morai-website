@@ -12,20 +12,16 @@
         a { color: #667eea; text-decoration: none; }
         a:hover { text-decoration: underline; }
         
-        /* Header */
         header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 1rem; text-align: center; }
         header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
         header p { font-size: 1.3rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
         
-        /* Nav */
         nav { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 1rem; position: sticky; top: 0; z-index: 100; }
         nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
         nav a { color: #667eea; font-weight: 500; }
         
-        /* Container */
         .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
         
-        /* Hero */
         .hero { text-align: center; padding: 3rem 1.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 16px; margin-bottom: 2rem; }
         .hero h2 { font-size: 2rem; margin-bottom: 1rem; }
         .hero p { max-width: 650px; margin: 0 auto 1.5rem; color: #666; font-size: 1.1rem; }
@@ -34,11 +30,9 @@
         .stat strong { display: block; font-size: 2rem; color: #667eea; }
         .stat span { color: #888; font-size: 0.9rem; }
         
-        /* Section Titles */
         .section-title { font-size: 1.8rem; text-align: center; margin-bottom: 2rem; color: #333; }
         .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #667eea; margin: 0.8rem auto 0; border-radius: 2px; }
         
-        /* Tool Cards */
         .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
         .tool-card { background: white; border-radius: 16px; padding: 1.8rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
         .tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
@@ -51,34 +45,25 @@
         .tool-card .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
         .tag { background: #f0f0ff; color: #667eea; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem; }
         
-        /* Articles */
         .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
-        .article-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s; }
-        .article-card:hover { transform: translateY(-4px); }
+        .article-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s; cursor: pointer; }
+        .article-card:hover { transform: translateY(-4px); text-decoration: none; }
         .article-card img { width: 100%; height: 180px; object-fit: cover; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .article-card .content { padding: 1.5rem; }
         .article-card .date { color: #999; font-size: 0.85rem; margin-bottom: 0.5rem; }
         .article-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; color: #333; }
         .article-card p { color: #666; font-size: 0.9rem; }
         
-        /* Categories */
-        .categories { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
-        .category { background: white; padding: 0.8rem 1.5rem; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); cursor: pointer; transition: all 0.3s; }
-        .category:hover, .category.active { background: #667eea; color: white; }
-        
-        /* CTA */
         .cta { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 4rem 1rem; border-radius: 16px; margin: 2rem 0; }
         .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
         .cta p { opacity: 0.9; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
         .btn { display: inline-block; background: white; color: #667eea; padding: 0.9rem 2rem; border-radius: 30px; font-weight: 600; transition: transform 0.2s; }
         .btn:hover { transform: scale(1.05); text-decoration: none; }
         
-        /* Footer */
         footer { background: #222; color: #aaa; text-align: center; padding: 3rem 1rem; margin-top: 3rem; }
         footer p { margin-bottom: 0.5rem; }
         footer a { color: #667eea; }
         
-        /* Responsive */
         @media (max-width: 768px) {
             header h1 { font-size: 2rem; }
             .hero .stats { gap: 1.5rem; }
@@ -196,30 +181,30 @@
         <section id="reviews">
             <h2 class="section-title">📝 In-Depth Reviews</h2>
             <div class="articles-grid">
-                <article class="article-card">
+                <a href="/chatgpt-vs-claude.html" class="article-card">
                     <div style="height: 180px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🤖</div>
                     <div class="content">
                         <div class="date">March 28, 2026</div>
                         <h3>ChatGPT-5 vs Claude 3.7: The Ultimate Comparison</h3>
                         <p>We put both AI giants head-to-head across 50+ tests. Results might surprise you.</p>
                     </div>
-                </article>
+                </a>
+                
+                <a href="/best-ai-tools-2026.html" class="article-card">
+                    <div style="height: 180px; background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🚀</div>
+                    <div class="content">
+                        <div class="date">March 30, 2026</div>
+                        <h3>10 AI Tools That Will 10x Your Productivity in 2026</h3>
+                        <p>These aren't your average tools. Here's how real professionals are using AI to get more done.</p>
+                    </div>
+                </a>
                 
                 <article class="article-card">
                     <div style="height: 180px; background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎨</div>
                     <div class="content">
                         <div class="date">March 25, 2026</div>
-                        <h3>Best AI Image Generators in 2026: Midjourney vs DALL-E 3 vs Stable Diffusion</h3>
+                        <h3>Best AI Image Generators in 2026: Midjourney vs DALL-E vs Stable Diffusion</h3>
                         <p>Which AI image tool is worth your money? We tested them all so you don't have to.</p>
-                    </div>
-                </article>
-                
-                <article class="article-card">
-                    <div style="height: 180px; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">💻</div>
-                    <div class="content">
-                        <div class="date">March 22, 2026</div>
-                        <h3>Cursor AI Review: Is It Really the Future of Coding?</h3>
-                        <p>After 3 months of daily use, here's our honest take on the AI-powered code editor.</p>
                     </div>
                 </article>
             </div>
@@ -235,15 +220,6 @@
             <h2 class="section-title">📰 Latest from the Blog</h2>
             <div class="articles-grid">
                 <article class="article-card">
-                    <div style="height: 180px; background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🚀</div>
-                    <div class="content">
-                        <div class="date">March 30, 2026</div>
-                        <h3>10 AI Tools That Will 10x Your Productivity in 2026</h3>
-                        <p>These aren't your average tools. Here's how real professionals are using AI to get more done.</p>
-                    </div>
-                </article>
-                
-                <article class="article-card">
                     <div style="height: 180px; background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">💰</div>
                     <div class="content">
                         <div class="date">March 27, 2026</div>
@@ -258,6 +234,15 @@
                         <div class="date">March 24, 2026</div>
                         <h3>AI Mobile Apps That Actually Work Well</h3>
                         <p>Most AI apps are desktop-first. But these ones deliver great experiences on your phone too.</p>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div style="height: 180px; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">💻</div>
+                    <div class="content">
+                        <div class="date">March 22, 2026</div>
+                        <h3>Cursor AI Review: Is It Really the Future of Coding?</h3>
+                        <p>After 3 months of daily use, here's our honest take on the AI-powered code editor.</p>
                     </div>
                 </article>
             </div>
