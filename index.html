@@ -3,305 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morai - Your Trusted AI Companion</title>
-    <meta name="description" content="Discover the best AI tools, read honest reviews, and stay ahead in the AI revolution. Your trusted source for AI tool comparisons and tutorials.">
+    <title>Morai - Your Trusted AI Companion | Best AI Tools & Reviews 2026</title>
+    <meta name="description" content="Discover the best AI tools, read honest reviews, and stay ahead in the AI revolution. Expert guides on AI coding tools, image generators, chatbots, and more — updated for 2026.">
     <meta name="keywords" content="AI tools, AI reviews, AI comparison, AI tutorials, ChatGPT, Claude, AI 2026">
     <link rel="canonical" href="https://morai.top/">
+    <meta property="og:title" content="Morai - Your Trusted AI Companion">
+    <meta property="og:description" content="Expert AI tool guides and honest reviews. Stay ahead in the AI revolution with Morai.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://morai.top/">
+    <meta property="og:site_name" content="Morai">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morai - Your Trusted AI Companion">
+    <meta name="twitter:description" content="Expert AI tool guides and honest reviews for 2026.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-        header { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); color: white; padding: 5rem 1rem; text-align: center; }
-        header h1 { font-size: 4rem; margin-bottom: 0.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.3); }
-        header p { font-size: 1.3rem; opacity: 0.95; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f8f9fa; }
+        a { color: #667eea; text-decoration: none; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 1rem; text-align: center; }
+        header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.95; max-width: 600px; margin: 0 auto; }
         header .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.9rem; margin-bottom: 1rem; }
-        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 1rem; position: sticky; top: 0; z-index: 100; border-radius: 0 0 20px 20px; }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
-        nav a { color: #667eea; font-weight: 600; text-decoration: none; padding: 0.5rem 1rem; border-radius: 8px; transition: all 0.3s; }
-        nav a:hover { background: #667eea; color: white; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1rem; }
-        h2 { font-size: 2.5rem; margin: 2rem 0 2rem; text-align: center; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        .articles { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin: 2rem 0; }
-        .article { background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; }
-        .article:hover { transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.25); }
-        .article-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; color: white; }
-        .article:nth-child(2) .article-header { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-        .article:nth-child(3) .article-header { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
-        .article:nth-child(4) .article-header { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
-        .article:nth-child(5) .article-header { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
-        .article-header h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-        .article-body { padding: 2rem; }
-        .article-body p { color: #666; font-size: 1rem; margin-bottom: 1.5rem; }
-        .article .meta { color: #888; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
-        .article .read-more { display: inline-flex; align-items: center; gap: 0.5rem; color: #667eea; font-weight: 600; text-decoration: none; padding: 0.8rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 50px; transition: all 0.3s; }
-        .article .read-more:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(102,126,234,0.4); }
-        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0; }
-        .stat { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; text-align: center; color: white; }
-        .stat-number { font-size: 3rem; font-weight: bold; }
-        .stat-label { opacity: 0.9; }
-        .cta { background: white; border-radius: 24px; padding: 3rem; text-align: center; margin: 3rem 0; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
-        .cta h3 { font-size: 2rem; color: #333; margin-bottom: 1rem; }
-        .cta p { color: #666; margin-bottom: 2rem; }
-        footer { background: rgba(0,0,0,0.2); backdrop-filter: blur(10px); color: white; text-align: center; padding: 3rem 1rem; margin-top: 3rem; border-radius: 20px 20px 0 0; }
-        footer p { opacity: 0.9; }
+        nav { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 1rem; position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: #667eea; font-weight: 500; padding: 0.5rem 1rem; border-radius: 8px; transition: 0.3s; }
+        nav a:hover, nav a.active { background: #667eea; color: white; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+        .section { margin-bottom: 3rem; }
+        .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #eee; }
+        .section-header h2 { font-size: 1.5rem; color: #333; }
+        .section-header .view-all { color: #667eea; font-weight: 500; font-size: 0.95rem; }
+        .section-header .view-all:hover { text-decoration: underline; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+        .card-body { padding: 1.5rem; }
+        .card-body h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #333; }
+        .card-body h3 a { color: #333; }
+        .card-body h3 a:hover { color: #667eea; }
+        .card-body p { color: #666; font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6; }
+        .card-body .read-more { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: transform 0.3s; }
+        .card-body .read-more:hover { transform: scale(1.05); }
+        .tag { display: inline-block; background: #f0f0ff; color: #667eea; padding: 0.15rem 0.6rem; border-radius: 50px; font-size: 0.75rem; margin-right: 0.3rem; }
+        .categories { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .cat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center; transition: transform 0.3s; }
+        .cat-card:hover { transform: translateY(-3px); }
+        .cat-card:nth-child(2) { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .cat-card:nth-child(3) { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .cat-card:nth-child(4) { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .cat-card:nth-child(5) { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .cat-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .cat-card p { font-size: 0.85rem; opacity: 0.9; }
+        footer { background: #222; color: #aaa; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer a { color: #667eea; }
         @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            .stats { grid-template-columns: 1fr; }
-            .articles { grid-template-columns: 1fr; }
+            header h1 { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="badge">🚀 AI Tools & Reviews</div>
+        <div class="badge">🚀 Updated for 2026</div>
         <h1>🤖 Morai</h1>
-        <p>Your Trusted AI Companion</p>
+        <p>Your trusted AI companion. Expert guides, honest reviews, and deep comparisons of the best AI tools.</p>
     </header>
-    
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/#tools">AI Tools</a></li>
-            <li><a href="/#reviews">Reviews</a></li>
-            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/ai-tools.html">AI Tools</a></li>
+            <li><a href="/ai-reviews.html">Reviews</a></li>
+            <li><a href="/ai-comparisons.html">Comparisons</a></li>
+            <li><a href="/ai-guides.html">Guides</a></li>
         </ul>
     </nav>
-    
     <div class="container">
-        <h2>🔥 Latest Articles</h2>
-        <div class="articles">
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI for Small Business Guide</h3>
-            </div>
-            <div class="article-body">
-                <p>Explore how small businesses can leverage AI tools to automate workflows and boost productivity in 2026.</p>
-                <a href="/ai-for-small-business-guide.html" class="read-more">Read More</a>
-            </div>
-        </div>
-        <div class="article">
-            <div class="article-header">
-                <h3>10 AI Tools That Will 10x Your Productivity</h3>
-            </div>
-            <div class="article-body">
-                <p>A curated list of the most powerful AI tools for professionals looking to boost productivity.</p>
-                <a href="/best-ai-tools-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-        <div class="article">
-            <div class="article-header">
-                <h3>ChatGPT-5 vs Claude 3.7: Ultimate Comparison</h3>
-            </div>
-            <div class="article-body">
-                <p>An in-depth comparison of the two leading AI assistants in 2026.</p>
-                <a href="/chatgpt-vs-claude.html" class="read-more">Read More</a>
-            </div>
-        </div>
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Image Generators 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Compare the top AI image generators including DALL-E 3, Midjourney v7, and Stable Diffusion.</p>
-                <a href="/ai-image-generators.html" class="read-more">Read More</a>
-            </div>
-        </div>
-        <div class="article">
-            <div class="article-header">
-                <h3>Cursor AI Review: The Future of Coding</h3>
-            </div>
-            <div class="article-body">
-                <p>A comprehensive review of Cursor AI, the AI-powered code editor changing how developers work.</p>
-                <a href="/cursor-ai-review.html" class="read-more">Read More</a>
-            </div>
-        </div>
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Writing Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Discover the top AI writing tools for content creators. Jasper, Copy.ai, and more compared.</p>
-                <a href="/ai-writing-tools.html" class="read-more">Read More</a>
-            </div>
-        </div>
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Code Review Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Compare the best AI code review tools in 2026. Discover how GitHub Copilot, Amazon CodeGuru, and others help.</p>
-                <a href="/ai-code-review-tools.html" class="read-more">Read More</a>
+        
+        <div class="section">
+            <div class="categories">
+                <a href="/ai-tools.html" class="cat-card">
+                    <h3>🛠️ AI Tools</h3>
+                    <p>22 guides & comparisons</p>
+                </a>
+                <a href="/ai-reviews.html" class="cat-card">
+                    <h3>🔍 Reviews</h3>
+                    <p>Honest deep dives</p>
+                </a>
+                <a href="/ai-comparisons.html" class="cat-card">
+                    <h3>⚔️ Comparisons</h3>
+                    <p>Head-to-head analysis</p>
+                </a>
+                <a href="/ai-guides.html" class="cat-card">
+                    <h3>📚 Guides</h3>
+                    <p>How to use AI tools</p>
+                </a>
+                <a href="/ai-coding-assistants.html" class="cat-card">
+                    <h3>💻 Coding</h3>
+                    <p>AI dev tools</p>
+                </a>
             </div>
         </div>
 
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Video Editing Tools 2026</h3>
+        <div class="section">
+            <div class="section-header">
+                <h2>🔥 Featured This Week</h2>
+                <a href="/ai-tools.html" class="view-all">View all AI tools →</a>
             </div>
-            <div class="article-body">
-                <p>Discover the top AI-powered video editing tools. Runway, Descript, and more compared for creators.</p>
-                <a href="/best-ai-video-editing-tools-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Voice Cloning Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Compare the best AI voice cloning and synthesis tools. ElevenLabs, Resemble AI, and more.</p>
-                <a href="/best-ai-voice-cloning-tools-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI SEO Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>AI-powered SEO tools that actually work. Surfer SEO, Jasper, and more compared for 2026.</p>
-                <a href="/best-ai-seo-tools-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Productivity Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Maximize your output with these AI productivity tools. Notion AI, Todoist, and more.</p>
-                <a href="/best-ai-productivity-tools-2026.html" class="read-more">Read More</a>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-coding-tools-2026.html">Best AI Coding Tools 2026</a></h3>
+                        <p>Beyond GitHub Copilot: Complete comparison of Cursor, Codeium, Tabnine, and more. Which AI coding assistant is right for you?</p>
+                        <a href="/best-ai-coding-tools-2026.html" class="read-more">Read Guide →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-agents-2026.html">Best AI Agents in 2026</a></h3>
+                        <p>Claude Code, AutoGPT, OpenAI Operator, and more. A complete guide to autonomous AI agents that work for you.</p>
+                        <a href="/best-ai-agents-2026.html" class="read-more">Read Guide →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/chatgpt-vs-claude.html">ChatGPT-5 vs Claude 3.7: Full Comparison</a></h3>
+                        <p>The two most powerful AI assistants head-to-head. We tested coding, writing, analysis, and long-context tasks.</p>
+                        <a href="/chatgpt-vs-claude.html" class="read-more">View Comparison →</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Image Editors 2026</h3>
+        <div class="section">
+            <div class="section-header">
+                <h2>💻 AI Coding & Development</h2>
+                <a href="/ai-tools.html#coding" class="view-all">View all →</a>
             </div>
-            <div class="article-body">
-                <p>Transform photos with AI. Remove backgrounds, enhance quality, and create art. Top AI image editors compared for 2026.</p>
-                <a href="/best-ai-image-editors-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Chatbots 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>ChatGPT alternatives that actually deliver. Compare Claude, Gemini, and emerging AI chatbots for productivity and creativity.</p>
-                <a href="/best-ai-chatbots-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="article-header">
-                <h3>Best Free AI Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Powerful AI tools that will not cost you a cent. Our curated list of the best free AI tools available right now.</p>
-                <a href="/best-free-ai-tools-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Note-Taking Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>AI-powered note-taking that organizes your thoughts automatically. Notion AI, Obsidian, and more compared.</p>
-                <a href="/best-ai-note-taking-tools-2026.html" class="read-more">Read More</a>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-coding-assistants-2026.html">Best AI Coding Assistants 2026</a></h3>
+                        <p>GitHub Copilot, Cursor, Claude Code, and more AI code completion tools compared.</p>
+                        <span class="tag">Coding</span><span class="tag">Development</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/ai-code-review-tools.html">Best AI Code Review Tools 2026</a></h3>
+                        <p>Amazon CodeGuru, GitHub Copilot, DeepCode, and more AI-powered code review tools.</p>
+                        <span class="tag">Code Review</span><span class="tag">QA</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/ai-agent-tools-2026.html">AI Agent Tools 2026</a></h3>
+                        <p>Claude Code, AutoGPT, GitHub Copilot Workspace, and autonomous AI agents.</p>
+                        <span class="tag">Agents</span><span class="tag">Automation</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/cursor-ai-review.html">Cursor AI Review: The Future of Coding</a></h3>
+                        <p>In-depth review of Cursor AI. We spent two weeks testing every feature.</p>
+                        <span class="tag">Review</span><span class="tag">Cursor</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Email Tools 2026</h3>
+        <div class="section">
+            <div class="section-header">
+                <h2>🖼️ AI Image & Video</h2>
+                <a href="/ai-tools.html#creative" class="view-all">View all →</a>
             </div>
-            <div class="article-body">
-                <p>Write better emails faster with AI. These tools help you compose, reply, and manage email with artificial intelligence.</p>
-                <a href="/best-ai-email-tools-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Translation Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Break language barriers with AI. DeepL, Google Translate, and emerging AI translators compared for accuracy and speed.</p>
-                <a href="/best-ai-translation-tools-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Meeting Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>AI-powered meeting assistants that transcribe, summarize, and action your meetings. Otter.ai, Fireflies, and more.</p>
-                <a href="/best-ai-meeting-tools-2026.html" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Marketing Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Automate your marketing with AI. From content creation to analytics, these tools help marketers work smarter.</p>
-                <a href="/best-ai-marketing-tools-2026.html" class="read-more">Read More</a>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/ai-image-generators.html">AI Image Generators 2026</a></h3>
+                        <p>DALL-E 3, Midjourney v7, Stable Diffusion, and Flux compared in detail.</p>
+                        <span class="tag">Images</span><span class="tag">Creative</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-video-editing-tools-2026.html">Best AI Video Editing Tools 2026</a></h3>
+                        <p>Runway, Descript, Kapwing, and more. AI-powered video editing for creators.</p>
+                        <span class="tag">Video</span><span class="tag">Creative</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-image-editors-2026.html">Best AI Image Editors 2026</a></h3>
+                        <p>Remove backgrounds, enhance photos, create art with AI-powered image editing tools.</p>
+                        <span class="tag">Images</span><span class="tag">Editing</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-voice-cloning-tools-2026.html">Best AI Voice Cloning Tools 2026</a></h3>
+                        <p>ElevenLabs, Resemble AI, and the best AI voice synthesis tools compared.</p>
+                        <span class="tag">Audio</span><span class="tag">Voice</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Coding Assistants 2026</h3>
+        <div class="section">
+            <div class="section-header">
+                <h2>📊 AI Productivity & Business</h2>
+                <a href="/ai-tools.html#productivity" class="view-all">View all →</a>
             </div>
-            <div class="article-body">
-                <p>GitHub Copilot alternatives that write code for you. Compare Cursor, Claude Code, and more AI coding assistants.</p>
-                <a href="/best-ai-coding-assistants-2026.html" class="read-more">Read More</a>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-chatbots-2026.html">Best AI Chatbots 2026</a></h3>
+                        <p>ChatGPT, Claude, Gemini, and the best AI chatbot alternatives compared for 2026.</p>
+                        <span class="tag">Chatbots</span><span class="tag">Assistants</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-seo-tools-2026.html">Best AI SEO Tools 2026</a></h3>
+                        <p>Surfer SEO, Jasper, and AI-powered SEO tools that actually work.</p>
+                        <span class="tag">SEO</span><span class="tag">Marketing</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-email-tools-2026.html">Best AI Email Tools 2026</a></h3>
+                        <p>Write better emails faster with AI. Compose, reply, and manage email intelligently.</p>
+                        <span class="tag">Email</span><span class="tag">Communication</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-meeting-tools-2026.html">Best AI Meeting Tools 2026</a></h3>
+                        <p>Otter.ai, Fireflies, and AI meeting assistants that transcribe and summarize.</p>
+                        <span class="tag">Meetings</span><span class="tag">Productivity</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="article">
-            <div class="article-header">
-                <h3>AI Agent Tools 2026: Autonomous AI That Works For You</h3>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>📚 Guides & Tutorials</h2>
+                <a href="/ai-guides.html" class="view-all">View all guides →</a>
             </div>
-            <div class="article-body">
-                <p>Discover the best AI agent tools in 2026. Claude Code, AutoGPT, GitHub Copilot Workspace, and more compared.</p>
-                <a href="/ai-agent-tools-2026.html" class="read-more">Read More</a>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/ai-for-small-business-guide.html">AI for Small Business Guide 2026</a></h3>
+                        <p>How small businesses can leverage AI tools to automate workflows and compete in 2026.</p>
+                        <span class="tag">Guide</span><span class="tag">Business</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-ai-tools-2026.html">10 AI Tools That Will 10x Your Productivity</a></h3>
+                        <p>The most powerful AI tools for professionals. We tested them all — here are our top picks.</p>
+                        <span class="tag">Guide</span><span class="tag">Productivity</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><a href="/best-free-ai-tools-2026.html">Best Free AI Tools 2026</a></h3>
+                        <p>Powerful AI tools that won't cost you a cent. Our curated list of the best free options.</p>
+                        <span class="tag">Free</span><span class="tag">Budget</span>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
-        <footer>
-        <p><strong>Morai</strong> - Your Trusted AI Companion</p>
+
+    </div>
+    <footer>
+        <p><a href="/">Morai</a> - Your Trusted AI Companion | <a href="/ai-tools.html">AI Tools</a> | <a href="/ai-reviews.html">Reviews</a> | <a href="/ai-comparisons.html">Comparisons</a> | <a href="/ai-guides.html">Guides</a></p>
         <p>© 2026 Morai. All rights reserved.</p>
     </footer>
 <script>
 var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?d1d9d04b764a3f8f5a92e975825446e6";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+(function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?d1d9d04b764a3f8f5a92e975825446e6"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();
 </script>
 </body>
 </html>
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Writing Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Discover the top AI writing tools for content creators. Jasper, Copy.ai, and more compared.</p>
-                <a href="/ai-writing-tools.html" class="read-more">Read More</a>
-            </div>
-        </div>
-        <div class="article">
-            <div class="article-header">
-                <h3>Best AI Code Review Tools 2026</h3>
-            </div>
-            <div class="article-body">
-                <p>Compare the best AI code review tools in 2026. Discover how GitHub Copilot, Amazon CodeGuru, and others help.</p>
-                <a href="/ai-code-review-tools.html" class="read-more">Read More</a>
-            </div>
-        </div>
