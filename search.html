@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Search - Find the Right AI Tool | Morai</title>
+    <meta name="description" content="Search and discover the best AI tools of 2026. Filter by category: coding assistants, image generators, chatbots, productivity tools, SEO tools, and more.">
+    <meta name="keywords" content="AI tools search, find AI tools, AI tools 2026, AI software, ChatGPT, Claude, Cursor, free AI tools">
+    <link rel="canonical" href="https://morai.top/search.html">
+    <meta property="og:title" content="AI Tools Search - Find the Right AI Tool | Morai">
+    <meta property="og:description" content="Search and discover the best AI tools of 2026. Comprehensive guides and comparisons across all categories.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://morai.top/search.html">
+    <meta property="og:site_name" content="Morai">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Tools Search - Find the Right AI Tool | Morai">
+    <meta name="twitter:description" content="Search and discover the best AI tools of 2026 across all categories.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "AI Tools Search",
+      "description": "Search and discover the best AI tools of 2026 across all categories.",
+      "url": "https://morai.top/search.html",
+      "publisher": { "@type": "Organization", "name": "Morai", "url": "https://morai.top" }
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f8f9fa; }
+        a { color: #667eea; text-decoration: none; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3.5rem 1rem; text-align: center; }
+        header h1 { font-size: 2.4rem; margin-bottom: 0.4rem; }
+        header p { font-size: 1rem; opacity: 0.9; }
+        nav { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 1rem; position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: #667eea; font-weight: 500; padding: 0.5rem 1rem; border-radius: 8px; transition: 0.3s; }
+        nav a:hover { background: #667eea; color: white; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+
+        /* HERO SEARCH */
+        .search-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem 1rem 2rem; text-align: center; }
+        .search-hero h1 { color: white; font-size: 2.4rem; margin-bottom: 0.5rem; }
+        .search-hero .subtitle { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 1.8rem; }
+        .search-form { max-width: 600px; margin: 0 auto; display: flex; gap: 0.8rem; }
+        .search-input { flex: 1; padding: 0.9rem 1.2rem; border: none; border-radius: 50px; font-size: 1rem; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+        .search-btn { background: #fff; color: #667eea; border: none; padding: 0.9rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap; }
+        .search-btn:hover { transform: scale(1.03); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+
+        /* TAGS */
+        .tags-bar { background: white; padding: 1.2rem 1rem; border-bottom: 1px solid #eee; text-align: center; }
+        .tags-label { font-size: 0.78rem; color: #999; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+        .quick-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; max-width: 900px; margin: 0 auto; }
+        .quick-tag { background: #f0f0ff; color: #667eea; border: 1.5px solid #e0e0ff; padding: 0.3rem 0.9rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .quick-tag:hover { background: #667eea; color: white; border-color: #667eea; }
+
+        /* TABS */
+        .category-tabs { background: white; padding: 0; border-bottom: 2px solid #eee; position: sticky; top: 58px; z-index: 90; }
+        .tabs-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .tabs-list { display: flex; justify-content: flex-start; gap: 0; list-style: none; min-width: max-content; padding: 0 1rem; }
+        .tab-btn { padding: 0.9rem 1.4rem; background: none; border: none; border-bottom: 3px solid transparent; color: #888; font-size: 0.92rem; font-weight: 600; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+        .tab-btn:hover { color: #667eea; }
+        .tab-btn.active { color: #667eea; border-bottom-color: #667eea; background: #fafaff; }
+
+        /* PAGE LAYOUT */
+        .page-layout { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: start; max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+        .article-main { min-width: 0; }
+        .sidebar { position: sticky; top: 130px; }
+        .sidebar-widget { background: white; border-radius: 12px; padding: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.2rem; }
+        .sidebar-widget h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #667eea; margin-bottom: 0.8rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; font-weight: 700; }
+        .sidebar-widget ul { list-style: none; margin: 0; padding: 0; }
+        .sidebar-widget li { margin-bottom: 0.5rem; }
+        .sidebar-widget li a { color: #555; font-size: 0.87rem; line-height: 1.4; display: block; }
+        .sidebar-widget li a:hover { color: #667eea; }
+        .sidebar-nav-cat { display: flex; flex-direction: column; gap: 0.3rem; }
+        .sidebar-nav-cat a { padding: 0.5rem 0.8rem; border-radius: 8px; color: #555; font-size: 0.9rem; font-weight: 500; }
+        .sidebar-nav-cat a:hover { background: #f0f0ff; color: #667eea; }
+        .breadcrumb { color: #999; margin-bottom: 1rem; font-size: 0.82rem; }
+        .breadcrumb a { color: #999; }
+        .breadcrumb a:hover { color: #667eea; }
+        .breadcrumb .sep { margin: 0 0.3rem; }
+        .breadcrumb .current { color: #667eea; }
+
+        /* GRID */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.3rem; }
+        .card { background: white; border-radius: 16px; padding: 1.4rem; box-shadow: 0 4px 12px rgba(0,0,0,0.07); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+        .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.4rem; }
+        .card-cat { background: #f0f0ff; color: #667eea; padding: 0.15rem 0.7rem; border-radius: 50px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .card-readtime { color: #aaa; font-size: 0.75rem; }
+        .card h3 { font-size: 1.05rem; color: #333; margin-bottom: 0.4rem; line-height: 1.4; }
+        .card h3 a { color: #333; }
+        .card h3 a:hover { color: #667eea; }
+        .card p { color: #666; font-size: 0.88rem; margin-bottom: 1rem; flex: 1; line-height: 1.6; }
+        .card-link { display: inline-flex; align-items: center; gap: 0.3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.45rem 1rem; border-radius: 50px; font-size: 0.83rem; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; align-self: flex-start; }
+        .card-link:hover { transform: scale(1.04); box-shadow: 0 4px 12px rgba(102,126,234,0.35); color: white; }
+
+        /* NO RESULTS */
+        .no-results { text-align: center; padding: 4rem 1rem; color: #999; display: none; }
+        .no-results.show { display: block; }
+        .no-results h3 { font-size: 1.3rem; color: #667eea; margin-bottom: 0.5rem; }
+        .no-results p { font-size: 0.95rem; }
+
+        /* RESULTS INFO */
+        .results-info { color: #999; font-size: 0.85rem; margin-bottom: 1rem; }
+        .results-info span { color: #667eea; font-weight: 700; }
+
+        footer { background: #222; color: #aaa; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer a { color: #667eea; }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) { .page-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        @media (max-width: 600px) {
+            .search-hero h1 { font-size: 1.8rem; }
+            .search-form { flex-direction: column; }
+            .search-btn { padding: 0.9rem; }
+            .tabs-list { padding: 0 0.5rem; }
+            .tab-btn { padding: 0.8rem 1rem; font-size: 0.85rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Search -->
+    <div class="search-hero">
+        <h1>Find the Right AI Tool</h1>
+        <p class="subtitle">Search across 27+ in-depth AI tool guides, reviews &amp; comparisons</p>
+        <form class="search-form" id="searchForm" onsubmit="return false;">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search AI tools... (e.g. ChatGPT, coding, image)" autocomplete="off">
+            <button class="search-btn" id="searchBtn">Search</button>
+        </form>
+    </div>
+
+    <!-- Quick Tags -->
+    <div class="tags-bar">
+        <div class="tags-label">Popular Searches</div>
+        <div class="quick-tags">
+            <span class="quick-tag" data-tag="chatgpt">ChatGPT</span>
+            <span class="quick-tag" data-tag="claude">Claude</span>
+            <span class="quick-tag" data-tag="cursor">Cursor</span>
+            <span class="quick-tag" data-tag="free">Free</span>
+            <span class="quick-tag" data-tag="coding">Coding</span>
+            <span class="quick-tag" data-tag="image">Image</span>
+            <span class="quick-tag" data-tag="writing">Writing</span>
+            <span class="quick-tag" data-tag="productivity">Productivity</span>
+            <span class="quick-tag" data-tag="seo">SEO</span>
+            <span class="quick-tag" data-tag="video">Video</span>
+            <span class="quick-tag" data-tag="chatbot">Chatbot</span>
+            <span class="quick-tag" data-tag="business">For Business</span>
+        </div>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+        <div class="tabs-scroll">
+            <ul class="tabs-list">
+                <li><button class="tab-btn active" data-category="all">All</button></li>
+                <li><button class="tab-btn" data-category="coding">Coding</button></li>
+                <li><button class="tab-btn" data-category="image">Image &amp; Video</button></li>
+                <li><button class="tab-btn" data-category="productivity">Productivity</button></li>
+                <li><button class="tab-btn" data-category="writing">Writing</button></li>
+                <li><button class="tab-btn" data-category="seo">SEO</button></li>
+                <li><button class="tab-btn" data-category="chatbot">Chatbots</button></li>
+                <li><button class="tab-btn" data-category="free">Free</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Nav -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/ai-tools.html">AI Tools</a></li>
+            <li><a href="/ai-reviews.html">Reviews</a></li>
+            <li><a href="/ai-comparisons.html">Comparisons</a></li>
+            <li><a href="/ai-guides.html">Guides</a></li>
+            <li><a href="/search.html">&#128269; Search</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Layout -->
+    <div class="page-layout">
+        <div class="article-main">
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb" style="margin-top:0;">
+                <a href="/">Home</a><span class="sep">/</span><a href="/ai-tools.html">AI Tools</a><span class="sep">/</span><span class="current">AI Tools Search</span>
+            </div>
+
+            <div class="results-info" id="resultsInfo">Showing all <span id="countNum">27</span> tools</div>
+
+            <!-- Cards Grid -->
+            <div class="cards-grid" id="cardsGrid">
+
+                <!-- Coding -->
+                <div class="card" data-keywords="coding tools developers 2026 github copilot cursor codeium" data-category="coding">
+                    <div class="card-top">
+                        <span class="card-cat">Coding</span>
+                        <span class="card-readtime">6 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-coding-tools-2026.html">Best AI Coding Tools 2026</a></h3>
+                    <p>Top AI coding tools for developers. GitHub Copilot, Cursor, Codeium, and more.</p>
+                    <a href="/best-ai-coding-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="coding assistants developers github copilot cursor codeium completion" data-category="coding">
+                    <div class="card-top">
+                        <span class="card-cat">Coding</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-coding-assistants-2026.html">Best AI Coding Assistants 2026</a></h3>
+                    <p>Best AI coding assistants comparison. Boost your development workflow with these top picks.</p>
+                    <a href="/best-ai-coding-assistants-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="code review quality amazon codeguru github copilot deepcode lint" data-category="coding">
+                    <div class="card-top">
+                        <span class="card-cat">Coding</span>
+                        <span class="card-readtime">4 min read</span>
+                    </div>
+                    <h3><a href="/ai-code-review-tools.html">AI Code Review Tools</a></h3>
+                    <p>AI-powered code review tools for higher quality code. Automated bug detection and best practices.</p>
+                    <a href="/ai-code-review-tools.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai agent tools automation claude code autogen github copilot workspace" data-category="coding">
+                    <div class="card-top">
+                        <span class="card-cat">Coding</span>
+                        <span class="card-readtime">7 min read</span>
+                    </div>
+                    <h3><a href="/ai-agent-tools-2026.html">Best AI Agent Tools 2026</a></h3>
+                    <p>Best AI agent tools for automation. Claude Code, AutoGPT, GitHub Copilot Workspace, and more.</p>
+                    <a href="/ai-agent-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="cursor ai review editor ide code" data-category="coding">
+                    <div class="card-top">
+                        <span class="card-cat">Review</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/cursor-ai-review.html">Cursor AI Review</a></h3>
+                    <p>In-depth review of Cursor AI &#8212; the AI-first code editor built for modern developers.</p>
+                    <a href="/cursor-ai-review.html" class="card-link">Read Review &#8594;</a>
+                </div>
+
+                <!-- Chatbots -->
+                <div class="card" data-keywords="chatbot chatgpt claude gemini ai chatbot assistant 2026" data-category="chatbot">
+                    <div class="card-top">
+                        <span class="card-cat">Chatbots</span>
+                        <span class="card-readtime">6 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-chatbots-2026.html">Best AI Chatbots 2026</a></h3>
+                    <p>Top AI chatbots in 2026. ChatGPT, Claude, Gemini, and the best AI chatbot alternatives.</p>
+                    <a href="/best-ai-chatbots-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="chatgpt openai assistant gpt" data-category="chatbot">
+                    <div class="card-top">
+                        <span class="card-cat">Comparison</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/chatgpt-vs-claude.html">ChatGPT vs Claude</a></h3>
+                    <p>Head-to-head comparison: ChatGPT vs Claude. Which AI assistant is right for you?</p>
+                    <a href="/chatgpt-vs-claude.html" class="card-link">Read Comparison &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="claude 3.7 sonnet review anthropic model" data-category="chatbot">
+                    <div class="card-top">
+                        <span class="card-cat">Review</span>
+                        <span class="card-readtime">6 min read</span>
+                    </div>
+                    <h3><a href="/claude-3-7-sonnet-review.html">Claude 3.7 Sonnet Review</a></h3>
+                    <p>Complete review of Claude 3.7 Sonnet &#8212; Anthropic's most powerful model for reasoning.</p>
+                    <a href="/claude-3-7-sonnet-review.html" class="card-link">Read Review &#8594;</a>
+                </div>
+
+                <!-- Image & Video -->
+                <div class="card" data-keywords="ai image editors photoshop remove background enhance photo" data-category="image">
+                    <div class="card-top">
+                        <span class="card-cat">Image</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-image-editors-2026.html">Best AI Image Editors 2026</a></h3>
+                    <p>Best AI image editors. Remove backgrounds, enhance photos, create art with AI.</p>
+                    <a href="/best-ai-image-editors-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai image generators dall-e midjourney stable diffusion art" data-category="image">
+                    <div class="card-top">
+                        <span class="card-cat">Image</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/ai-image-generators.html">AI Image Generators</a></h3>
+                    <p>AI image generators guide. DALL-E 3, Midjourney v7, Stable Diffusion, and more.</p>
+                    <a href="/ai-image-generators.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai video editing tools runway descript kapwing 2026" data-category="image">
+                    <div class="card-top">
+                        <span class="card-cat">Video</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-video-editing-tools-2026.html">Best AI Video Editing Tools 2026</a></h3>
+                    <p>Best AI video editing tools. Runway, Descript, Kapwing, and more for faster video production.</p>
+                    <a href="/best-ai-video-editing-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai voice cloning elevenlabs resemble audio synthesis" data-category="image">
+                    <div class="card-top">
+                        <span class="card-cat">Audio</span>
+                        <span class="card-readtime">4 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-voice-cloning-tools-2026.html">Best AI Voice Cloning Tools 2026</a></h3>
+                    <p>Best AI voice cloning tools. ElevenLabs, Resemble AI, and AI voice synthesis platforms.</p>
+                    <a href="/best-ai-voice-cloning-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <!-- Productivity -->
+                <div class="card" data-keywords="ai email tools gmail outlook write compose" data-category="productivity">
+                    <div class="card-top">
+                        <span class="card-cat">Productivity</span>
+                        <span class="card-readtime">4 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-email-tools-2026.html">Best AI Email Tools 2026</a></h3>
+                    <p>Best AI email tools. Write better emails faster with AI email assistants.</p>
+                    <a href="/best-ai-email-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai meeting tools otter fireflies transcript" data-category="productivity">
+                    <div class="card-top">
+                        <span class="card-cat">Productivity</span>
+                        <span class="card-readtime">4 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-meeting-tools-2026.html">Best AI Meeting Tools 2026</a></h3>
+                    <p>Best AI meeting tools. Otter.ai, Fireflies, and AI meeting assistants for smarter meetings.</p>
+                    <a href="/best-ai-meeting-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai note taking tools notion obsidian notionai" data-category="productivity">
+                    <div class="card-top">
+                        <span class="card-cat">Productivity</span>
+                        <span class="card-readtime">4 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-note-taking-tools-2026.html">Best AI Note-Taking Tools 2026</a></h3>
+                    <p>Best AI note-taking tools. Notion AI, Obsidian, and AI-powered note-taking apps.</p>
+                    <a href="/best-ai-note-taking-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai productivity tools workflow automation 2026" data-category="productivity">
+                    <div class="card-top">
+                        <span class="card-cat">Productivity</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-productivity-tools-2026.html">Best AI Productivity Tools 2026</a></h3>
+                    <p>Best AI productivity tools for 2026. Supercharge your workflow with these top AI picks.</p>
+                    <a href="/best-ai-productivity-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai translation tools deepl google language" data-category="productivity">
+                    <div class="card-top">
+                        <span class="card-cat">Productivity</span>
+                        <span class="card-readtime">4 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-translation-tools-2026.html">Best AI Translation Tools 2026</a></h3>
+                    <p>Best AI translation tools. DeepL, Google Translate, and AI-powered translation services.</p>
+                    <a href="/best-ai-translation-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <!-- SEO -->
+                <div class="card" data-keywords="ai seo tools surferseo jaspero content optimization 2026" data-category="seo">
+                    <div class="card-top">
+                        <span class="card-cat">SEO</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-seo-tools-2026.html">Best AI SEO Tools 2026</a></h3>
+                    <p>Best AI SEO tools for 2026. Surfer SEO, Jasper, and AI tools for search optimization.</p>
+                    <a href="/best-ai-seo-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai marketing tools content creation automation analytics" data-category="seo">
+                    <div class="card-top">
+                        <span class="card-cat">Marketing</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-marketing-tools-2026.html">Best AI Marketing Tools 2026</a></h3>
+                    <p>Best AI marketing tools. Automate your marketing with AI &#8212; content creation to analytics.</p>
+                    <a href="/best-ai-marketing-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <!-- Writing -->
+                <div class="card" data-keywords="ai writing tools jaspero copyai content creation" data-category="writing">
+                    <div class="card-top">
+                        <span class="card-cat">Writing</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/ai-writing-tools.html">AI Writing Tools Guide</a></h3>
+                    <p>Complete guide to AI writing tools. Jasper, Copy.ai, Writer, and AI-powered writing assistants.</p>
+                    <a href="/ai-writing-tools.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <div class="card" data-keywords="ai small business guide entrepreneurs startup automation" data-category="writing">
+                    <div class="card-top">
+                        <span class="card-cat">Guide</span>
+                        <span class="card-readtime">7 min read</span>
+                    </div>
+                    <h3><a href="/ai-for-small-business-guide.html">AI for Small Business Guide 2026</a></h3>
+                    <p>AI for small business guide. How entrepreneurs can leverage AI to grow and automate operations.</p>
+                    <a href="/ai-for-small-business-guide.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <!-- Free -->
+                <div class="card" data-keywords="free ai tools no cost no付费 openai claude gemini" data-category="free">
+                    <div class="card-top">
+                        <span class="card-cat">Free</span>
+                        <span class="card-readtime">5 min read</span>
+                    </div>
+                    <h3><a href="/best-free-ai-tools-2026.html">Best Free AI Tools 2026</a></h3>
+                    <p>Best free AI tools for 2026. Top no-cost AI tools for coding, writing, images, and more.</p>
+                    <a href="/best-free-ai-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+                <!-- General -->
+                <div class="card" data-keywords="best ai tools 2026 all categories assistant chatbot" data-category="all">
+                    <div class="card-top">
+                        <span class="card-cat">AI Tools</span>
+                        <span class="card-readtime">6 min read</span>
+                    </div>
+                    <h3><a href="/best-ai-tools-2026.html">Best AI Tools 2026</a></h3>
+                    <p>Best AI tools of 2026 &#8212; comprehensive guide across all categories and use cases.</p>
+                    <a href="/best-ai-tools-2026.html" class="card-link">Read Guide &#8594;</a>
+                </div>
+
+            </div><!-- /cards-grid -->
+
+            <!-- No Results -->
+            <div class="no-results" id="noResults">
+                <h3>No tools found</h3>
+                <p id="noResultsMsg">Try a different keyword.</p>
+            </div>
+
+        </div><!-- /article-main -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h4>Categories</h4>
+                <div class="sidebar-nav-cat">
+                    <a href="/ai-tools.html">&#128187; AI Tools</a>
+                    <a href="/ai-reviews.html">&#9733; Reviews</a>
+                    <a href="/ai-comparisons.html">&#8644; Comparisons</a>
+                    <a href="/ai-guides.html">&#128218; Guides</a>
+                    <a href="/search.html">&#128269; Search All</a>
+                </div>
+            </div>
+            <div class="sidebar-widget">
+                <h4>Popular Guides</h4>
+                <ul>
+                    <li><a href="/best-ai-coding-tools-2026.html">Best AI Coding Tools 2026</a></li>
+                    <li><a href="/best-ai-chatbots-2026.html">Best AI Chatbots 2026</a></li>
+                    <li><a href="/best-ai-image-editors-2026.html">Best AI Image Editors 2026</a></li>
+                    <li><a href="/best-ai-productivity-tools-2026.html">Best AI Productivity Tools</a></li>
+                    <li><a href="/best-ai-seo-tools-2026.html">Best AI SEO Tools 2026</a></li>
+                    <li><a href="/best-free-ai-tools-2026.html">Best Free AI Tools 2026</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-widget">
+                <h4>Tool Types</h4>
+                <ul>
+                    <li><a href="/search.html">ChatGPT &amp; Claude</a></li>
+                    <li><a href="/search.html">AI Coding Assistants</a></li>
+                    <li><a href="/search.html">Image Generators</a></li>
+                    <li><a href="/search.html">Writing Tools</a></li>
+                    <li><a href="/search.html">SEO &amp; Marketing</a></li>
+                    <li><a href="/search.html">Free AI Tools</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div><!-- /page-layout -->
+
+    <footer>
+        <p><a href="/">Morai</a> - Your Trusted AI Companion | <a href="/ai-tools.html">AI Tools</a> | <a href="/ai-reviews.html">Reviews</a></p>
+        <p>&copy; 2026 Morai. All rights reserved.</p>
+    </footer>
+
+    <!-- Baidu Tongji -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?d1d9d04b764a3f8f5a92e975825446e6"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();
+    </script>
+
+    <!-- Search & Filter JS -->
+    <script>
+    (function() {
+        var searchInput = document.getElementById('searchInput');
+        var searchBtn = document.getElementById('searchBtn');
+        var cards = document.querySelectorAll('.card');
+        var noResults = document.getElementById('noResults');
+        var noResultsMsg = document.getElementById('noResultsMsg');
+        var countNum = document.getElementById('countNum');
+        var resultsInfo = document.getElementById('resultsInfo');
+        var tabBtns = document.querySelectorAll('.tab-btn');
+        var quickTags = document.querySelectorAll('.quick-tag');
+
+        var currentQuery = '';
+        var currentCategory = 'all';
+
+        // Category map
+        var categoryMap = {
+            'all': null,
+            'coding': ['coding', 'code', 'agent'],
+            'image': ['image', 'video', 'voice'],
+            'productivity': ['productivity', 'meeting', 'email', 'note', 'translation'],
+            'writing': ['writing'],
+            'seo': ['seo', 'marketing'],
+            'chatbot': ['chatbot', 'chatgpt', 'claude'],
+            'free': ['free']
+        };
+
+        function matchesCategory(keywords) {
+            if (currentCategory === 'all') return true;
+            var cats = categoryMap[currentCategory];
+            if (!cats) return true;
+            keywords = keywords.toLowerCase();
+            return cats.some(function(c) { return keywords.indexOf(c) !== -1; });
+        }
+
+        function matchesSearch(card) {
+            if (!currentQuery) return true;
+            var q = currentQuery.toLowerCase();
+            var title = card.querySelector('h3').textContent.toLowerCase();
+            var desc = card.querySelector('p').textContent.toLowerCase();
+            var keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+            return title.indexOf(q) !== -1 || desc.indexOf(q) !== -1 || keywords.indexOf(q) !== -1;
+        }
+
+        function applyFilters() {
+            var total = 0;
+            cards.forEach(function(card) {
+                var show = matchesCategory(card.getAttribute('data-category') || '') && matchesSearch(card);
+                card.style.display = show ? '' : 'none';
+                if (show) total++;
+            });
+            if (total === 0) {
+                noResults.classList.add('show');
+                noResultsMsg.textContent = "No tools found for \u2018" + currentQuery + "\u2019. Try a different keyword.";
+                resultsInfo.style.display = 'none';
+            } else {
+                noResults.classList.remove('show');
+                resultsInfo.style.display = '';
+                countNum.textContent = total;
+                var label = currentCategory === 'all' ? 'all' : currentCategory;
+                resultsInfo.innerHTML = 'Showing <span>' + total + '</span> ' + label + ' tool' + (total !== 1 ? 's' : '');
+            }
+        }
+
+        // Search input
+        searchInput.addEventListener('input', function() {
+            currentQuery = this.value.trim();
+            applyFilters();
+        });
+        searchBtn.addEventListener('click', function() {
+            currentQuery = searchInput.value.trim();
+            applyFilters();
+        });
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                currentQuery = this.value.trim();
+                applyFilters();
+            }
+        });
+
+        // Tab clicks
+        tabBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                tabBtns.forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+                currentCategory = this.getAttribute('data-category');
+                applyFilters();
+            });
+        });
+
+        // Quick tag clicks
+        quickTags.forEach(function(tag) {
+            tag.addEventListener('click', function() {
+                var tagText = this.getAttribute('data-tag');
+                searchInput.value = tagText;
+                currentQuery = tagText;
+                applyFilters();
+                // Scroll to cards
+                var tabs = document.querySelector('.category-tabs');
+                if (tabs) tabs.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
