@@ -20,10 +20,37 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #4a5568; background: #ffffff; }
         a { color: #667eea; text-decoration: none; }
         /* Header */
-        header { background: #ffffff; border-bottom: 1px solid #667eea; box-shadow: 0 2px 8px rgba(102,126,234,0.08); color: #1a1a2e; padding: 4rem 1rem; text-align: center; }
-        header h1 { font-size: 3rem; margin-bottom: 0.5rem; color: #667eea; }
-        header p { font-size: 1.2rem; color: #4a5568; max-width: 600px; margin: 0 auto; }
-        header .badge { display: inline-block; background: #f0f0ff; color: #667eea; padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.9rem; margin-bottom: 1rem; border: 1px solid #e0e0ff; }
+        header {
+            /* 克制的深紫渐变，不是亮紫彩虹 */
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d5a 50%, #3d3d7a 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        /* header里的标题 */
+        header h1 {
+            color: #ffffff;
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            /* 标题加一点紫色光晕效果 */
+            text-shadow: 0 2px 20px rgba(102, 126, 234, 0.5);
+        }
+        /* header副标题 */
+        header p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+        }
+        /* 分类标签在header里的样式 */
+        header .tagline {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.2);
+            border: 1px solid rgba(102, 126, 234, 0.4);
+            color: #a5b4fc;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
         /* Nav */
         nav { background: #fff; box-shadow: 0 2px 8px rgba(102,126,234,0.06); padding: 1rem; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #e2e8f0; }
         nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
@@ -68,7 +95,7 @@
 </head>
 <body>
     <header>
-        <div class="badge">🚀 Updated for 2026</div>
+        <div class="tagline">🚀 Updated for 2026</div>
         <h1>🤖 Morai</h1>
         <p>Your trusted AI companion. Expert guides, honest reviews, and deep comparisons of the best AI tools.</p>
     </header>
