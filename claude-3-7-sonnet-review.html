@@ -15,18 +15,18 @@
     <meta name="description" content="In-depth Claude 3.7 Sonnet review: extended thinking mode, Claude Code integration, performance benchmarks vs GPT-4o and Gemini. Is this the best AI for coding and complex reasoning?">
     <meta name="keywords" content="Claude 3.7 Sonnet, Anthropic AI, Claude review, AI coding assistant, extended thinking, Claude vs ChatGPT, best AI model 2026">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; margin: 0; padding: 0; }
-        header { background: rgba(0,0,0,0.2); color: white; padding: 3rem 1rem; text-align: center; }
-        h1 { font-size: 2.3rem; margin-bottom: 0.5rem; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #ffffff; min-height: 100vh; }
+        header { background: #ffffff; color: #1a1a2e; padding: 3rem 1rem; text-align: center; border-bottom: 2px solid #667eea; }
+        h1 { font-size: 2.3rem; margin-bottom: 0.5rem; color: #1a1a2e; }
         .container { max-width: 800px; margin: 3rem auto; padding: 0 1rem; }
         .article-content { background: white; border-radius: 16px; padding: 3rem; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
         h2 { color: #4a5568; margin-top: 2rem; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem; }
         h3 { color: #2d3748; margin-top: 1.5rem; }
         p { margin: 1rem 0; color: #4a5568; }
-        .highlight-box { background: #f7fafc; border-left: 4px solid #667eea; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+        .highlight-box { background: #f8f9fa; border-left: 3px solid #667eea; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
         .highlight-box h3 { margin-top: 0; color: #667eea; }
         .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0; }
-        .stat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center; }
+        .stat-card { background: #667eea; color: white; padding: 1.5rem; border-radius: 12px; text-align: center; }
         .stat-card .number { font-size: 2rem; font-weight: bold; }
         .stat-card .label { font-size: 0.9rem; opacity: 0.9; }
         .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
@@ -34,13 +34,13 @@
         .comparison-table th { background: #f7fafc; color: #4a5568; }
         .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
         .pros, .cons { padding: 1.5rem; border-radius: 12px; }
-        .pros { background: #f0fff4; border: 1px solid #9ae6b4; }
-        .cons { background: #fff5f5; border: 1px solid #feb2b2; }
-        .pros h3 { color: #276749; margin-top: 0; }
-        .cons h3 { color: #c53030; margin-top: 0; }
+        .pros { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .cons { background: #fef2f2; border: 1px solid #fecaca; }
+        .pros h3 { color: #166534; margin-top: 0; }
+        .cons h3 { color: #991b1b; margin-top: 0; }
         .verdict { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
         .verdict h3 { color: white; margin-top: 0; }
-        footer { text-align: center; color: rgba(255,255,255,0.7); padding: 2rem; font-size: 0.9rem; }
+        footer { text-align: center; color: #4a5568; background: #f8f9fa; padding: 2rem; font-size: 0.9rem; }
         code { background: #edf2f7; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.9rem; }
         ul { margin: 1rem 0; padding-left: 1.5rem; }
         li { margin: 0.5rem 0; color: #4a5568; }
@@ -62,12 +62,12 @@
 .breadcrumb a:hover{color:#667eea}
 .breadcrumb .sep{margin:0 0.3rem}
 .breadcrumb .current{color:#667eea}
-.article-header{color:white;padding:2.5rem 1rem 2rem;text-align:center}
+.article-header { color: #1a1a2e; padding:2.5rem 1rem 2rem;text-align:center}
 .article-header-inner{max-width:800px;margin:0 auto}
-.article-category-tag{display:inline-block;background:rgba(255,255,255,0.25);color:white;padding:0.25rem 1rem;border-radius:50px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.8rem}
-.article-header h1{font-size:2rem;margin-bottom:0.4rem;line-height:1.3}
-.article-subtitle{font-size:1rem;opacity:0.9;margin-bottom:1rem}
-.article-meta-row{font-size:0.82rem;opacity:0.85;display:flex;align-items:center;justify-content:center;gap:0.4rem;flex-wrap:wrap}
+.article-category-tag { display: inline-block; background: #f5f3ff; color: #667eea; padding: 0.25rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; border: 1px solid #667eea; }
+.article-header h1 { font-size: 2rem; color: #1a1a2e; }
+.article-subtitle { font-size: 1rem; color: #4a5568; margin-bottom: 1rem; }
+.article-meta-row { font-size: 0.82rem; color: #667eea; display: flex; align-items: center; justify-content: center; gap: 0.4rem; flex-wrap: wrap; }
 .prev-next-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0 1rem}
 .prev-article,.next-article{background:white;border-radius:12px;padding:1.2rem;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 .prev-article{text-align:left}
@@ -94,7 +94,7 @@
 .related-tag{display:inline-block;background:#f0f0ff;color:#667eea;font-size:0.7rem;padding:0.1rem 0.5rem;border-radius:50px;margin-bottom:0.3rem;text-transform:uppercase;font-weight:700}
 .related-title{display:block;color:#333;font-weight:600;font-size:0.88rem;line-height:1.4}
 @media(max-width:900px){.article-layout{grid-template-columns:1fr}.sidebar{display:none}.prev-next-nav{grid-template-columns:1fr}.next-article{text-align:left}}
-@media(max-width:600px){.article-header h1{font-size:1.6rem}.breadcrumb{font-size:0.78rem}}
+@media(max-width:600px){.article-header h1 { font-size: 2rem; color: #1a1a2e; }.breadcrumb{font-size:0.78rem}}
 </style>
     <meta property="og:title" content="Claude 3.7 Sonnet Review | Morai">
     <meta property="og:description" content="The thinking AI model that redefines what's possible with extended reasoning and Claude Code integration.">
@@ -124,7 +124,7 @@
 </script>
 </head>
 <body>
-    <header class="article-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); text-align:center;"><div class="article-header-inner"><div class="article-category-tag">[Review] Reviews</div><h1>Claude 3.7 Sonnet Review</h1><p class="article-subtitle">The thinking AI model that redefines what's possible with extended reasoning and Claude Code integration.</p><div class="article-meta-row"><span>四月 7, 2026</span><span> | </span><span>6 min read</span><span> | </span><span>By Morai</span></div></div></header>
+    <header class="article-header" style="background:#ffffff;color:#1a1a2e;text-align:center;"><div class="article-header-inner"><div class="article-category-tag">[Review] Reviews</div><h1>Claude 3.7 Sonnet Review</h1><p class="article-subtitle">The thinking AI model that redefines what's possible with extended reasoning and Claude Code integration.</p><div class="article-meta-row"><span>四月 7, 2026</span><span> | </span><span>6 min read</span><span> | </span><span>By Morai</span></div></div></header>
     <div class="article-layout"><div class="article-main"><div class="container">
         <article class="article-content">
             <p>Anthropic's Claude 3.7 Sonnet isn't just another AI model update鈥攊t's a fundamental shift in how AI can approach complex problems. With its groundbreaking extended thinking mode and seamless Claude Code integration, this model challenges our assumptions about what AI assistants can achieve.</p>
