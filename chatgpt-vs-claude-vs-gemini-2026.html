@@ -101,6 +101,15 @@
         .back-to-top { display: inline-block; background: #f0f0ff; color: #667eea; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: background 0.3s; }
         .back-to-top:hover { background: #e0e0ff; color: #667eea; text-decoration: none; }
         @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .sidebar { display: none; } .prev-next-nav { grid-template-columns: 1fr; } }
+    
+        .related { background: #f8f9fa; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; border-left: 4px solid #667eea; }
+        .related h3 { color: #667eea; margin-top: 0; margin-bottom: 1rem; font-size: 1rem; }
+        .related ul { list-style: none; margin: 0; padding: 0; }
+        .related li { margin-bottom: 0.6rem; padding: 0.3rem 0; border-bottom: 1px solid #eee; }
+        .related li:last-child { border-bottom: none; }
+        .related li a { color: #667eea; font-weight: 500; }
+        .related li a:hover { text-decoration: underline; }
+        .related li span { display: block; color: #888; font-size: 0.85rem; margin-top: 0.2rem; }
     </style>
     <script type="application/ld+json">
     {
@@ -332,6 +341,15 @@
         </div>
         <a href="#" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top</a>
     </div>
+    
+        <div class="related">
+            <h3>📖 Keep Reading</h3>
+            <ul>
+<li><a href="/best-ai-coding-tools-2026.html">Best AI Coding Tools 2026</a><span>Top AI tools for developers</span></li>
+<li><a href="/best-ai-agents-2026.html">Best AI Agents in 2026</a><span>Claude Code, AutoGPT and more</span></li>
+<li><a href="/chatgpt-vs-claude.html">ChatGPT vs Claude 3.7</a><span>We tested both extensively</span></li>
+            </ul>
+        </div>
     <footer>
         <p>Morai — Expert AI Recommendations | <a href="/">morai.top</a></p>
         <p>© 2026 Morai. All rights reserved.</p>
