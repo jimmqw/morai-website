@@ -64,6 +64,17 @@ a{color:var(--accent);text-decoration:none}a:hover{color:#33ddff}
 .cons-box{background:rgba(255,82,82,0.06);border:1px solid rgba(255,82,82,0.2);border-left:3px solid var(--red);padding:1.2rem;border-radius:0 var(--r) var(--r) 0;margin:1rem 0}
 .cons-box strong{color:var(--red)}
 .cons-box ul{color:var(--text2);font-size:0.88rem;margin:0.5rem 0 0 1.2rem}
+.comparison-table{width:100%;border-collapse:separate;border-spacing:0;margin:1.5rem 0;font-size:0.85rem;border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.comparison-table th{background:var(--card-hover);color:var(--accent);font-weight:600;padding:0.8rem 0.6rem;text-align:center;border-bottom:1px solid var(--border);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em}
+.comparison-table th:first-child{text-align:left;padding-left:1rem}
+.comparison-table td{padding:0.75rem 0.6rem;text-align:center;border-bottom:1px solid var(--border);color:var(--text2)}
+.comparison-table td:first-child{text-align:left;padding-left:1rem;font-weight:600;color:var(--text)}
+.comparison-table tr:last-child td{border-bottom:none}
+.comparison-table tr:hover td{background:var(--accent-dim)}
+.score-high{color:var(--green);font-weight:700}
+.score-mid{color:var(--yellow);font-weight:700}
+.score-low{color:var(--text3);font-weight:700}
+.price-tag{color:var(--green);font-weight:600}
 .highlight-box{background:rgba(0,212,255,0.04);border:1px solid var(--accent-border);border-left:3px solid var(--accent);padding:1.3rem;border-radius:0 var(--r) var(--r) 0;margin:1.5rem 0}
 .highlight-box h3{color:var(--accent);margin-bottom:0.5rem;font-size:1rem}
 .highlight-box p{color:var(--text2);font-size:0.9rem;margin:0}
@@ -145,7 +156,103 @@ a{color:var(--accent);text-decoration:none}a:hover{color:#33ddff}
 <li><strong>Ease of use:</strong> Interface quality, generation speed, and how quickly a new user can produce usable output</li>
 <li><strong>Value:</strong> Price relative to output quality and feature set</li>
 </ul>
-<p>We test with consistent prompts across categories: cinematic landscape, character motion, product showcase, and abstract animation. Each tool gets a minimum of 20 generated clips evaluated by human reviewers.</p>
+<p>We test with consistent prompts across categories: cinematic landscape, character motion, product showcase, and abstract animation. 
+<h2>Quick Comparison Table</h2>
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Quality Score</th>
+<th>Starting Price</th>
+<th>Max Clip Length</th>
+<th>Generation Speed</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sora</td>
+<td><span class="score-high">9.0/10</span></td>
+<td><span class="price-tag">$20/mo</span></td>
+<td>60s</td>
+<td>Slow (3-5 min)</td>
+<td>Cinematic production</td>
+</tr>
+<tr>
+<td>Kling AI</td>
+<td><span class="score-high">8.2/10</span></td>
+<td><span class="price-tag">$9.9/mo</span></td>
+<td>10s</td>
+<td>Fast (less than 1 min)</td>
+<td>Best value</td>
+</tr>
+<tr>
+<td>Runway Gen-3</td>
+<td><span class="score-high">8.5/10</span></td>
+<td><span class="price-tag">$15/mo</span></td>
+<td>10s</td>
+<td>Medium (1-2 min)</td>
+<td>Creative control</td>
+</tr>
+<tr>
+<td>Pika 2.0</td>
+<td><span class="score-mid">7.5/10</span></td>
+<td><span class="price-tag">$8/mo</span></td>
+<td>10s</td>
+<td>Fast (less than 1 min)</td>
+<td>Social content</td>
+</tr>
+<tr>
+<td>Luma Dream Machine</td>
+<td><span class="score-high">8.0/10</span></td>
+<td><span class="price-tag">$29/mo</span></td>
+<td>5s</td>
+<td>Slow (3-5 min)</td>
+<td>Photorealism</td>
+</tr>
+<tr>
+<td>Haiper</td>
+<td><span class="score-mid">7.5/10</span></td>
+<td><span class="price-tag">$9.99/mo</span></td>
+<td>5s</td>
+<td>Medium (1-2 min)</td>
+<td>Motion quality</td>
+</tr>
+<tr>
+<td>Stable Video Diffusion</td>
+<td><span class="score-mid">6.5/10</span></td>
+<td><span class="price-tag">Free (local)</span></td>
+<td>14s</td>
+<td>Varies (GPU)</td>
+<td>Self-hosted</td>
+</tr>
+<tr>
+<td>Veo (Google)</td>
+<td><span class="score-high">8.0/10</span></td>
+<td><span class="price-tag">Pay-per-use</span></td>
+<td>30s+</td>
+<td>Medium (1-2 min)</td>
+<td>Enterprise</td>
+</tr>
+<tr>
+<td>Meta Movie Gen</td>
+<td><span class="score-mid">7.0/10</span></td>
+<td><span class="price-tag">Free</span></td>
+<td>10s+</td>
+<td>Medium (1-2 min)</td>
+<td>Social + Audio</td>
+</tr>
+<tr>
+<td>PixVerse</td>
+<td><span class="score-mid">6.5/10</span></td>
+<td><span class="price-tag">$5/mo</span></td>
+<td>5s</td>
+<td>Fast (less than 1 min)</td>
+<td>Budget projects</td>
+</tr>
+</tbody>
+</table>
+
 <h2>1. OpenAI Sora — The Flagship Powerhouse</h2>
 <div class="tool-card">
 <h3><a href="https://openai.com/sora" target="_blank" rel="nofollow">Sora</a> by OpenAI</h3>
