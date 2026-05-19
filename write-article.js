@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const content = `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -65,7 +66,7 @@
     .tool-desc { font-size: 0.88rem; color: var(--text2); margin-bottom: 14px; line-height: 1.7; }
     .tool-features { list-style: none; margin-bottom: 16px; }
     .tool-features li { font-size: 0.82rem; color: var(--text2); padding: 4px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 6px; }
-    .tool-features li::before { content: '✓'; color: var(--accent); font-weight: 700; }
+    .tool-features li::before { content: '\u2713'; color: var(--accent); font-weight: 700; }
     .tool-pricing { font-size: 0.82rem; color: var(--accent); font-weight: 600; }
 
     .toc { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; position: sticky; top: 80px; }
@@ -124,17 +125,17 @@
       <main>
         <div class="breadcrumb">
           <a href="https://morai.top/">首页</a>
-          <span>›</span>
+          <span>\u203a</span>
           <a href="https://morai.top/category/ai-tools">AI工具</a>
-          <span>›</span>
+          <span>\u203a</span>
           <span style="color: var(--text2)">Best AI会议总结工具推荐榜单 (2026年)</span>
         </div>
         <div class="eyebrow">AI TOOLS ROUNDUP</div>
         <h1>Best AI会议总结工具推荐榜单 (2026年)</h1>
         <div class="meta">
-          <span>📅 2026-05-19</span>
-          <span>⏱ 约12分钟阅读</span>
-          <span>🏧 AI工具 · 效率提升</span>
+          <span>\ud83d\udcc5 2026-05-19</span>
+          <span>\u23f1 约12分钟阅读</span>
+          <span>\ud83c\udfe7 AI工具 \u00b7 效率提升</span>
         </div>
 
         <div class="intro">
@@ -415,4 +416,13 @@
     <script src="https://hm.baidu.com/hm.js?d1d9d04b764a3f8f5a92e975825446e6"></script>
   </footer>
 </body>
-</html>
+</html>`;
+
+const outPath = 'C:\\Users\\Administrator\\.openclaw\\workspace\\morai-website\\best-ai-meeting-summarizers-2026.html';
+fs.writeFileSync(outPath, content, 'utf8');
+const stats = fs.statSync(outPath);
+console.log('Written:', stats.size, 'bytes');
+if (stats.size < 10000) {
+  console.error('File too small - possible truncation');
+  process.exit(1);
+}
